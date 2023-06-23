@@ -30,7 +30,6 @@ class CardView: UIView {
     
     private func configureTitle() {
         addSubview(title)
-        title.text = "bank"
         title.font = UIFont(name: "Kailasa", size: 24)
         title.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -42,7 +41,6 @@ class CardView: UIView {
     
     private func configureNumberOfCard() {
         addSubview(numberOfCard)
-        numberOfCard.text = "**** **** **** 1478"
         numberOfCard.font = UIFont(name: "Kailasa", size: numberOfCardSize)
         numberOfCard.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([

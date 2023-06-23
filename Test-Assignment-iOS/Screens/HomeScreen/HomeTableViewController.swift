@@ -17,7 +17,8 @@ class HomeTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        navigationController?.pushViewController(CardViewController(), animated: true)
+        let router = Router(window: view.window!)
+        router.showCardScreen(navigationController: navigationController!)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
