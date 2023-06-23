@@ -16,6 +16,10 @@ class HomeTableViewController: UITableViewController {
         tableView.register(HomeTableViewCell.self, forCellReuseIdentifier: HomeTableViewCell.identifier)
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        navigationController?.pushViewController(CardViewController(), animated: true)
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         1
     }
