@@ -9,11 +9,13 @@ import UIKit
 
 final class HomeTableViewController: UITableViewController {
     
-    private var viewModel: HomeTableViewModelProtocool
+    private var viewModel: HomeTableViewModelProtocol
+    var router: Router
     private var cards: [Card] = []
     
-    init(viewModel: HomeTableViewModelProtocool) {
+    init(viewModel: HomeTableViewModelProtocol, router: Router) {
         self.viewModel = viewModel
+        self.router = router
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -35,10 +37,9 @@ final class HomeTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let cell = tableView.cellForRow(at: indexPath) as? HomeTableViewCell {
-            let router = Router(window: view.window!)
-            router.showCardScreen(navigationController: navigationController!, numberOfCard: cell.title.text ?? "error")
-        }
+        let card = cards[indexPath.row]
+//        let router = Router(navigationController: navigationController!)
+        router.showCardScreen(card: card)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

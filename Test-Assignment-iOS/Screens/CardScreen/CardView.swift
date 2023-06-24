@@ -7,12 +7,17 @@
 
 import UIKit
 
+struct CardViewData {
+    let cardNumber: String
+    let bankLogo: UIImage?
+}
+
 class CardView: UIView {
     
-    let title = UILabel()
-    let numberOfCard = UILabel()
-    var numberOfCardSize: CGFloat
-    let icon = UIImageView()
+    private let title = UILabel()
+    private let numberOfCard = UILabel()
+    private var numberOfCardSize: CGFloat
+    private let icon = UIImageView()
 
     init(frame: CGRect, numberOfCardSize: CGFloat) {
         self.numberOfCardSize = numberOfCardSize
@@ -28,8 +33,14 @@ class CardView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func setupModel(_ model: CardViewData) {
+        numberOfCard.text = model.cardNumber
+        icon.image = model.bankLogo
+    }
+    
     private func configureTitle() {
         addSubview(title)
+        title.text = "bank"
         title.font = UIFont.systemFont(ofSize: 24)
         title.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([

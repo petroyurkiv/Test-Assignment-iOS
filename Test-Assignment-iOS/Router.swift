@@ -7,22 +7,19 @@
 
 import UIKit
 
-final class Router {
+class Router {
     
-    private let window: UIWindow
+    private weak var navigationController: UINavigationController?
     
-    init(window: UIWindow) {
-        self.window = window
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
     }
     
     func showHomeScreenAsRootController() {
-        let navigationController = UINavigationController(rootViewController: HomeTableViewController(viewModel: HomeTableViewModel()))
-        window.rootViewController = navigationController
-        window.makeKeyAndVisible()
+        navigationController?.setViewControllers([HomeUIComposer.build(router: self)], animated: true)
     }
     
-    func showCardScreen(navigationController: UINavigationController, numberOfCard: String) {
-        let viewController = CardViewController(numberOfCard: numberOfCard)
-        navigationController.pushViewController(viewController, animated: true)
+    func showCardScreen(card: Card) {
+        navigationController?.pushViewController(CardUIComposer.build(card: card), animated: true)
     }
 }

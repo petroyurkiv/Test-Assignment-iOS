@@ -7,13 +7,13 @@
 
 import UIKit
 
-class CardViewController: UIViewController {
+final class CardViewController: UIViewController {
     
+    private var viewModel: CardViewModelProtocol
     var cardView: CardView!
-    var numberOfCard: String
     
-    init(numberOfCard: String) {
-        self.numberOfCard = numberOfCard
+    init(viewModel: CardViewModelProtocol) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -26,14 +26,17 @@ class CardViewController: UIViewController {
         view.backgroundColor = .white
         title = "Card"
         configureCardView()
-        print(numberOfCard)
+        viewModel.onDisplayCard = { [weak self] card in
+            guard let self else { return }
+            let cardViewData = CardViewData(cardNumber: card.formattedNumber(), bankLogo: card.type.image)
+            self.cardView.setupModel(cardViewData)
+        }
+        viewModel.onLoad()
     }
 
     func configureCardView() {
         cardView = CardView(frame: .zero, numberOfCardSize: view.frame.height / 100 * 4.5)
         view.addSubview(cardView)
-        cardView.title.text = "bank"
-        cardView.numberOfCard.text = numberOfCard
         cardView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             cardView.centerYAnchor.constraint(equalTo: view.centerYAnchor),

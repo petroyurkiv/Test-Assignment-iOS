@@ -7,13 +7,7 @@
 
 import Foundation
 
-protocol HomeTableViewModelProtocool {
-    var onListUpdate: (([Card]) -> Void)? { get set }
-    func onPlusTap()
-}
-
-class HomeTableViewModel: HomeTableViewModelProtocool {
-    
+class HomeTableViewModel: HomeTableViewModelProtocol {
     private var cards: [Card] = []
 
     var onListUpdate: (([Card]) -> Void)?
@@ -24,6 +18,10 @@ class HomeTableViewModel: HomeTableViewModelProtocool {
         onListUpdate?(cards)
     }
     
+//    func onCardTap(_ card: Card) {
+//        router?.showCardScreen(card: card)
+//    }
+    
     private func makeRandomCard() -> Card {
         let cardNumber = generateRandomCardNumber()
         let cardType = CardType.allCases.randomElement() ?? .visa
@@ -32,7 +30,7 @@ class HomeTableViewModel: HomeTableViewModelProtocool {
 
     private func generateRandomCardNumber() -> String {
         var result = ""
-        for _ in 0..<15 {
+        for _ in 0..<16 {
             result.append(String(Int.random(in: 0..<10)))
         }
         return result

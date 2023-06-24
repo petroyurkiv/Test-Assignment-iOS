@@ -17,6 +17,11 @@
 		AB38A5212A45C08C00268426 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB38A51F2A45C08C00268426 /* LaunchScreen.storyboard */; };
 		AB54E7A22A4729430008FF91 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB54E7A12A4729430008FF91 /* Card.swift */; };
 		AB54E7A52A4729E40008FF91 /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB54E7A42A4729E40008FF91 /* CardType.swift */; };
+		AB54E7A72A4747F70008FF91 /* HomeTableViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB54E7A62A4747F70008FF91 /* HomeTableViewModelProtocol.swift */; };
+		AB54E7A92A4749550008FF91 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB54E7A82A4749550008FF91 /* CardViewModel.swift */; };
+		AB54E7AD2A4764830008FF91 /* HomeUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB54E7AC2A4764830008FF91 /* HomeUIComposer.swift */; };
+		AB54E7AF2A4765410008FF91 /* CardUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB54E7AE2A4765410008FF91 /* CardUIComposer.swift */; };
+		AB54E7B12A4776FB0008FF91 /* CardViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB54E7B02A4776FB0008FF91 /* CardViewModelProtocol.swift */; };
 		AB696AC72A4621F200EB12C2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB696AC62A4621F200EB12C2 /* Router.swift */; };
 		AB696AC92A46254800EB12C2 /* HomeTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB696AC82A46254800EB12C2 /* HomeTableViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +39,11 @@
 		AB38A5222A45C08C00268426 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB54E7A12A4729430008FF91 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		AB54E7A42A4729E40008FF91 /* CardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
+		AB54E7A62A4747F70008FF91 /* HomeTableViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewModelProtocol.swift; sourceTree = "<group>"; };
+		AB54E7A82A4749550008FF91 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		AB54E7AC2A4764830008FF91 /* HomeUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIComposer.swift; sourceTree = "<group>"; };
+		AB54E7AE2A4765410008FF91 /* CardUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardUIComposer.swift; sourceTree = "<group>"; };
+		AB54E7B02A4776FB0008FF91 /* CardViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModelProtocol.swift; sourceTree = "<group>"; };
 		AB696AC62A4621F200EB12C2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		AB696AC82A46254800EB12C2 /* HomeTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,8 +63,10 @@
 			isa = PBXGroup;
 			children = (
 				AB38A5152A45C08600268426 /* HomeTableViewController.swift */,
-				AB0693AB2A45EE5F0010ED04 /* HomeTableViewCell.swift */,
+				AB54E7A62A4747F70008FF91 /* HomeTableViewModelProtocol.swift */,
 				AB696AC82A46254800EB12C2 /* HomeTableViewModel.swift */,
+				AB0693AB2A45EE5F0010ED04 /* HomeTableViewCell.swift */,
+				AB54E7AC2A4764830008FF91 /* HomeUIComposer.swift */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -72,7 +84,10 @@
 			isa = PBXGroup;
 			children = (
 				AB0693B02A45FB8C0010ED04 /* CardViewController.swift */,
+				AB54E7B02A4776FB0008FF91 /* CardViewModelProtocol.swift */,
+				AB54E7A82A4749550008FF91 /* CardViewModel.swift */,
 				AB0693B22A4602E00010ED04 /* CardView.swift */,
+				AB54E7AE2A4765410008FF91 /* CardUIComposer.swift */,
 			);
 			path = CardScreen;
 			sourceTree = "<group>";
@@ -188,15 +203,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB696AC72A4621F200EB12C2 /* Router.swift in Sources */,
+				AB54E7B12A4776FB0008FF91 /* CardViewModelProtocol.swift in Sources */,
 				AB0693B32A4602E00010ED04 /* CardView.swift in Sources */,
+				AB54E7A72A4747F70008FF91 /* HomeTableViewModelProtocol.swift in Sources */,
 				AB38A51C2A45C08600268426 /* Test_Assignment_iOS.xcdatamodeld in Sources */,
 				AB0693AC2A45EE5F0010ED04 /* HomeTableViewCell.swift in Sources */,
 				AB696AC92A46254800EB12C2 /* HomeTableViewModel.swift in Sources */,
 				AB0693B12A45FB8C0010ED04 /* CardViewController.swift in Sources */,
+				AB54E7AD2A4764830008FF91 /* HomeUIComposer.swift in Sources */,
 				AB38A5162A45C08600268426 /* HomeTableViewController.swift in Sources */,
+				AB54E7A92A4749550008FF91 /* CardViewModel.swift in Sources */,
 				AB54E7A22A4729430008FF91 /* Card.swift in Sources */,
 				AB38A5122A45C08600268426 /* AppDelegate.swift in Sources */,
 				AB54E7A52A4729E40008FF91 /* CardType.swift in Sources */,
+				AB54E7AF2A4765410008FF91 /* CardUIComposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
