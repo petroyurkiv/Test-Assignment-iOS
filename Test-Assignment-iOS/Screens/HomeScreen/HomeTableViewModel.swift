@@ -31,6 +31,10 @@ class HomeTableViewModel: HomeTableViewModelProtocool {
     }
 
     private func generateRandomCardNumber() -> String {
-        return String(arc4random_uniform(9000) + 1000)
+        var result = ""
+        for _ in 0..<15 {
+            result.append(String(Int.random(in: 0..<10)))
+        }
+        return result
     }
 }
