@@ -24,6 +24,11 @@ class HomeTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func setupModel(_ model: Card) {
+        icon.image = model.type.image
+        title.text = model.formattedNumber()
+    }
+    
     private func configureIcon() {
         contentView.addSubview(icon)
         icon.translatesAutoresizingMaskIntoConstraints = false
@@ -38,7 +43,7 @@ class HomeTableViewCell: UITableViewCell {
     
     private func configureTitle() {
         contentView.addSubview(title)
-        title.font = UIFont(name: "Kailasa", size: 24)
+        title.font = UIFont.systemFont(ofSize: 24)
         title.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             title.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),

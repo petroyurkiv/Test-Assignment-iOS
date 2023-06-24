@@ -11,12 +11,14 @@
 		AB0693B12A45FB8C0010ED04 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0693B02A45FB8C0010ED04 /* CardViewController.swift */; };
 		AB0693B32A4602E00010ED04 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0693B22A4602E00010ED04 /* CardView.swift */; };
 		AB38A5122A45C08600268426 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB38A5112A45C08600268426 /* AppDelegate.swift */; };
-		AB38A5142A45C08600268426 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB38A5132A45C08600268426 /* SceneDelegate.swift */; };
 		AB38A5162A45C08600268426 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB38A5152A45C08600268426 /* HomeTableViewController.swift */; };
 		AB38A51C2A45C08600268426 /* Test_Assignment_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB38A51A2A45C08600268426 /* Test_Assignment_iOS.xcdatamodeld */; };
 		AB38A51E2A45C08C00268426 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB38A51D2A45C08C00268426 /* Assets.xcassets */; };
 		AB38A5212A45C08C00268426 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB38A51F2A45C08C00268426 /* LaunchScreen.storyboard */; };
+		AB54E7A22A4729430008FF91 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB54E7A12A4729430008FF91 /* Card.swift */; };
+		AB54E7A52A4729E40008FF91 /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB54E7A42A4729E40008FF91 /* CardType.swift */; };
 		AB696AC72A4621F200EB12C2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB696AC62A4621F200EB12C2 /* Router.swift */; };
+		AB696AC92A46254800EB12C2 /* HomeTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB696AC82A46254800EB12C2 /* HomeTableViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,13 +27,15 @@
 		AB0693B22A4602E00010ED04 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		AB38A50E2A45C08600268426 /* Test-Assignment-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Test-Assignment-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB38A5112A45C08600268426 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AB38A5132A45C08600268426 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AB38A5152A45C08600268426 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		AB38A51B2A45C08600268426 /* Test_Assignment_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Test_Assignment_iOS.xcdatamodel; sourceTree = "<group>"; };
 		AB38A51D2A45C08C00268426 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB38A5202A45C08C00268426 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB38A5222A45C08C00268426 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB54E7A12A4729430008FF91 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		AB54E7A42A4729E40008FF91 /* CardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
 		AB696AC62A4621F200EB12C2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		AB696AC82A46254800EB12C2 /* HomeTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +54,7 @@
 			children = (
 				AB38A5152A45C08600268426 /* HomeTableViewController.swift */,
 				AB0693AB2A45EE5F0010ED04 /* HomeTableViewCell.swift */,
+				AB696AC82A46254800EB12C2 /* HomeTableViewModel.swift */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -92,8 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				AB38A5112A45C08600268426 /* AppDelegate.swift */,
-				AB38A5132A45C08600268426 /* SceneDelegate.swift */,
 				AB696AC62A4621F200EB12C2 /* Router.swift */,
+				AB54E7A32A4729D20008FF91 /* Model */,
 				AB0693AE2A45FB560010ED04 /* Screens */,
 				AB38A51D2A45C08C00268426 /* Assets.xcassets */,
 				AB38A51F2A45C08C00268426 /* LaunchScreen.storyboard */,
@@ -101,6 +106,15 @@
 				AB38A51A2A45C08600268426 /* Test_Assignment_iOS.xcdatamodeld */,
 			);
 			path = "Test-Assignment-iOS";
+			sourceTree = "<group>";
+		};
+		AB54E7A32A4729D20008FF91 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB54E7A12A4729430008FF91 /* Card.swift */,
+				AB54E7A42A4729E40008FF91 /* CardType.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,10 +191,12 @@
 				AB0693B32A4602E00010ED04 /* CardView.swift in Sources */,
 				AB38A51C2A45C08600268426 /* Test_Assignment_iOS.xcdatamodeld in Sources */,
 				AB0693AC2A45EE5F0010ED04 /* HomeTableViewCell.swift in Sources */,
+				AB696AC92A46254800EB12C2 /* HomeTableViewModel.swift in Sources */,
 				AB0693B12A45FB8C0010ED04 /* CardViewController.swift in Sources */,
 				AB38A5162A45C08600268426 /* HomeTableViewController.swift in Sources */,
+				AB54E7A22A4729430008FF91 /* Card.swift in Sources */,
 				AB38A5122A45C08600268426 /* AppDelegate.swift in Sources */,
-				AB38A5142A45C08600268426 /* SceneDelegate.swift in Sources */,
+				AB54E7A52A4729E40008FF91 /* CardType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +340,8 @@
 				INFOPLIST_FILE = "Test-Assignment-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -354,7 +371,8 @@
 				INFOPLIST_FILE = "Test-Assignment-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

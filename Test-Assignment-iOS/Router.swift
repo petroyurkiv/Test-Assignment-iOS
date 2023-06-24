@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Router {
+final class Router {
     
     private let window: UIWindow
     
@@ -16,13 +16,13 @@ class Router {
     }
     
     func showHomeScreenAsRootController() {
-        let navigationController = UINavigationController(rootViewController: HomeTableViewController())
+        let navigationController = UINavigationController(rootViewController: HomeTableViewController(viewModel: HomeTableViewModel()))
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
     }
     
-    func showCardScreen(navigationController: UINavigationController) {
-        let viewController = CardViewController()
+    func showCardScreen(navigationController: UINavigationController, numberOfCard: String) {
+        let viewController = CardViewController(numberOfCard: numberOfCard)
         navigationController.pushViewController(viewController, animated: true)
     }
 }
