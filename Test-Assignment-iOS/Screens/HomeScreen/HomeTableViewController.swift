@@ -8,10 +8,10 @@
 import UIKit
 
 final class HomeTableViewController: UITableViewController {
-    
     private var viewModel: HomeTableViewModelProtocol
-    var router: Router
+    private var router: Router
     private var cards: [Card] = []
+    var list: [Cards] = []
     
     init(viewModel: HomeTableViewModelProtocol, router: Router) {
         self.viewModel = viewModel
@@ -38,7 +38,6 @@ final class HomeTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let card = cards[indexPath.row]
-//        let router = Router(navigationController: navigationController!)
         router.showCardScreen(card: card)
     }
     
@@ -63,6 +62,4 @@ final class HomeTableViewController: UITableViewController {
     @objc func onPlusTap() {
         viewModel.onPlusTap()
     }
-
 }
-

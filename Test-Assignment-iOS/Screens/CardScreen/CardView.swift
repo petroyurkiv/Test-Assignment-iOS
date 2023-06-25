@@ -13,7 +13,6 @@ struct CardViewData {
 }
 
 class CardView: UIView {
-    
     private let title = UILabel()
     private let numberOfCard = UILabel()
     private var numberOfCardSize: CGFloat
@@ -71,5 +70,4 @@ class CardView: UIView {
             icon.widthAnchor.constraint(equalToConstant: 80)
         ])
     }
-
 }

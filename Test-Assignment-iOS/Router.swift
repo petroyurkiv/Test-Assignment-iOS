@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Router {
+final class Router {
     
     private weak var navigationController: UINavigationController?
     

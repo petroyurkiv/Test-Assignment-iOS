@@ -7,20 +7,45 @@
 
 import Foundation
 
-class HomeTableViewModel: HomeTableViewModelProtocol {
+final class HomeTableViewModel: HomeTableViewModelProtocol {
+    private let cardsService: CardsService
     private var cards: [Card] = []
+    
+    init(cardsService: CardsService) {
+        self.cardsService = cardsService
+    }
 
     var onListUpdate: (([Card]) -> Void)?
     
-    func onPlusTap() {
-        let newCard = makeRandomCard()
-        cards.append(newCard)
-        onListUpdate?(cards)
+    func onLoad() {
+        cardsService.fetchList { [weak self] result in
+            guard let self else { return }
+            
+            switch result {
+            case .success(let cards):
+                self.cards = cards
+                self.onListUpdate?(cards)
+            case .failure:
+                break
+            }
+        }
     }
     
-//    func onCardTap(_ card: Card) {
-//        router?.showCardScreen(card: card)
-//    }
+    func onPlusTap() {
+        let card = makeRandomCard()
+        cardsService.save(card: card) { [weak self] result in
+            guard let self else { return }
+            
+            switch result {
+            case .success:
+                self.cards.insert(card, at: 0)
+                self.onListUpdate?(self.cards)
+                
+            case .failure:
+                break
+            }
+        }
+    }
     
     private func makeRandomCard() -> Card {
         let cardNumber = generateRandomCardNumber()

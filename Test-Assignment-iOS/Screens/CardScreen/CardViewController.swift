@@ -8,9 +8,10 @@
 import UIKit
 
 final class CardViewController: UIViewController {
-    
     private var viewModel: CardViewModelProtocol
-    var cardView: CardView!
+    private var cardView: CardView!
+    private var cardWidthCNST: NSLayoutConstraint!
+    private var cardHeightCNST: NSLayoutConstraint!
     
     init(viewModel: CardViewModelProtocol) {
         self.viewModel = viewModel
@@ -35,15 +36,33 @@ final class CardViewController: UIViewController {
     }
 
     func configureCardView() {
-        cardView = CardView(frame: .zero, numberOfCardSize: view.frame.height / 100 * 4.5)
+        // 85 X 54
+        cardView = CardView(frame: .zero, numberOfCardSize: 36)
         view.addSubview(cardView)
+        
         cardView.translatesAutoresizingMaskIntoConstraints = false
+        let cardSize = cardSize()
+        cardWidthCNST = cardView.widthAnchor.constraint(equalToConstant: cardSize.width)
+        cardHeightCNST = cardView.heightAnchor.constraint(equalToConstant: cardSize.height)
+        
         NSLayoutConstraint.activate([
             cardView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            cardView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            cardView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            cardView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.30)
+            cardView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            cardWidthCNST,
+            cardHeightCNST
         ])
+    }
+    
+    private func cardSize() -> CGSize {
+        let ratioCoef = 85.0 / 54.0
+        let width: CGFloat
+        if UIDevice.current.orientation.isLandscape {
+            width = UIScreen.main.bounds.height - 32.0
+        } else {
+            width = UIScreen.main.bounds.width - 32.0
+        }
+        let height = width / ratioCoef
+        return CGSize(width: width, height: height)
     }
     
 }

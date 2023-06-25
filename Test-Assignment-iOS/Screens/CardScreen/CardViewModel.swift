@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CardViewModel: CardViewModelProtocol {
+final class CardViewModel: CardViewModelProtocol {
     private let card: Card
     var onDisplayCard: ((Card) -> Void)?
     

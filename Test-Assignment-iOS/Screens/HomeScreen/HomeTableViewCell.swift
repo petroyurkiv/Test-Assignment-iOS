@@ -8,7 +8,6 @@
 import UIKit
 
 class HomeTableViewCell: UITableViewCell {
-    
     static let identifier = "Cell"
     
     let icon = UIImageView()

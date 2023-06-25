@@ -12,7 +12,6 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    var router: Router?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let window = UIWindow(frame: UIScreen.main.bounds)
@@ -21,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let router = Router(navigationController: navigationController)
         router.showHomeScreenAsRootController()
         self.window = window
-        self.router = router
         window.makeKeyAndVisible()
         return true
     }

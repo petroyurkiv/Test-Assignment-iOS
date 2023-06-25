@@ -16,4 +16,3 @@ struct Card {
         return "**** **** **** \(number.suffix(4))"
     }
 }
-

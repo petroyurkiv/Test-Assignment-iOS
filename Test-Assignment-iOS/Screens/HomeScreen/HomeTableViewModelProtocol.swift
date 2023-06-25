@@ -9,6 +9,6 @@ import Foundation
 
 protocol HomeTableViewModelProtocol {
     var onListUpdate: (([Card]) -> Void)? { get set }
+    func onLoad()
     func onPlusTap()
-//    func onCardTap(_ card: Card)
 }
