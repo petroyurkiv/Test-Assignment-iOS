@@ -22,7 +22,7 @@ class CardView: UIView {
         self.numberOfCardSize = numberOfCardSize
         super.init(frame: frame)
         layer.cornerRadius = 18
-        backgroundColor = .red
+        backgroundColor = .systemGray
         configureTitle()
         configureNumberOfCard()
         configureIcon()

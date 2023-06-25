@@ -26,6 +26,7 @@
 		AB54E7B62A47AAAD0008FF91 /* InMemoryCardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB54E7B52A47AAAD0008FF91 /* InMemoryCardService.swift */; };
 		AB696AC72A4621F200EB12C2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB696AC62A4621F200EB12C2 /* Router.swift */; };
 		AB696AC92A46254800EB12C2 /* HomeTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB696AC82A46254800EB12C2 /* HomeTableViewModel.swift */; };
+		AB6996AB2A483F6F00FF961F /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6996AA2A483F6F00FF961F /* CoreDataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		AB54E7B52A47AAAD0008FF91 /* InMemoryCardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryCardService.swift; sourceTree = "<group>"; };
 		AB696AC62A4621F200EB12C2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		AB696AC82A46254800EB12C2 /* HomeTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewModel.swift; sourceTree = "<group>"; };
+		AB6996AA2A483F6F00FF961F /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 			children = (
 				AB54E7B22A47AA6D0008FF91 /* CardsService.swift */,
 				AB54E7B52A47AAAD0008FF91 /* InMemoryCardService.swift */,
+				AB6996AA2A483F6F00FF961F /* CoreDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				AB54E7A22A4729430008FF91 /* Card.swift in Sources */,
 				AB38A5122A45C08600268426 /* AppDelegate.swift in Sources */,
 				AB54E7A52A4729E40008FF91 /* CardType.swift in Sources */,
+				AB6996AB2A483F6F00FF961F /* CoreDataService.swift in Sources */,
 				AB54E7AF2A4765410008FF91 /* CardUIComposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,7 +11,6 @@ final class HomeTableViewController: UITableViewController {
     private var viewModel: HomeTableViewModelProtocol
     private var router: Router
     private var cards: [Card] = []
-    var list: [Cards] = []
     
     init(viewModel: HomeTableViewModelProtocol, router: Router) {
         self.viewModel = viewModel
