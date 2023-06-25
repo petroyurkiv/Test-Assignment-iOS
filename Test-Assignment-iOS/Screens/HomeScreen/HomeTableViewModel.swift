@@ -50,7 +50,7 @@ final class HomeTableViewModel: HomeTableViewModelProtocol {
     private func makeRandomCard() -> Card {
         let cardNumber = generateRandomCardNumber()
         let cardType = CardType.allCases.randomElement() ?? .visa
-        return Card(id: UUID(), type: cardType, number: cardNumber)
+        return Card(id: UUID(), createdAt: Date(), type: cardType, number: cardNumber)
     }
 
     private func generateRandomCardNumber() -> String {

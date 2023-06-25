@@ -9,6 +9,7 @@ import Foundation
 
 struct Card {
     let id: UUID
+    let createdAt: Date
     let type: CardType
     let number: String
     

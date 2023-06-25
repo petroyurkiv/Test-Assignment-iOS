@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum CardType: CaseIterable {
+enum CardType: Int, CaseIterable {
     case visa
     case mastercard
     

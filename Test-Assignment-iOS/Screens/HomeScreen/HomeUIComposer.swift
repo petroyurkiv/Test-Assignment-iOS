@@ -9,6 +9,6 @@ import UIKit
 
 enum HomeUIComposer {
     static func build(router: Router) -> UIViewController {
-        return HomeTableViewController(viewModel: HomeTableViewModel(cardsService: InMemoryCardService()), router: router)
+        return HomeTableViewController(viewModel: HomeTableViewModel(cardsService: CoreDataService()), router: router)
     }
 }

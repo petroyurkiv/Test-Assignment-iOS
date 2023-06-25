@@ -8,12 +8,12 @@
 import Foundation
 
 final class InMemoryCardService: CardsService {
-    private var cards: [Card] = [Card(id: .init(), type: .visa, number: "0000 1111 2222 3333 4444")]
-    
+    private var cards: [Card] = [Card(id: .init(), createdAt:  Date(), type: .visa, number: "0000 1111 2222 3333 4444")]
+
     func fetchList(completion: @escaping (Result<[Card], Error>) -> Void) {
         completion(.success(cards))
     }
-    
+
     func save(card: Card, completion: @escaping (Result<Void, Error>) -> Void) {
         cards.insert(card, at: 0)
         completion(.success(()))
