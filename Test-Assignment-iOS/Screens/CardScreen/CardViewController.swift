@@ -29,7 +29,7 @@ final class CardViewController: UIViewController {
         configureCardView()
         viewModel.onDisplayCard = { [weak self] card in
             guard let self else { return }
-            let cardViewData = CardViewData(cardNumber: card.formattedNumber(), bankLogo: card.type.image)
+            let cardViewData = CardViewData(cardNumber: card.formattedNumber(), bankLogo: card.type.image, color: card.color)
             self.cardView.setupModel(cardViewData)
         }
         viewModel.onLoad()
@@ -37,7 +37,7 @@ final class CardViewController: UIViewController {
 
     func configureCardView() {
         // 85 X 54
-        cardView = CardView(frame: .zero, numberOfCardSize: 36)
+        cardView = CardView(frame: .zero)
         view.addSubview(cardView)
         
         cardView.translatesAutoresizingMaskIntoConstraints = false

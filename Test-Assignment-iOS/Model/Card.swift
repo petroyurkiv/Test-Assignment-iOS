@@ -12,6 +12,7 @@ struct Card {
     let createdAt: Date
     let type: CardType
     let number: String
+    let color: String
     
     func formattedNumber() -> String {
         return "**** **** **** \(number.suffix(4))"

@@ -50,7 +50,10 @@ final class HomeTableViewModel: HomeTableViewModelProtocol {
     private func makeRandomCard() -> Card {
         let cardNumber = generateRandomCardNumber()
         let cardType = CardType.allCases.randomElement() ?? .visa
-        return Card(id: UUID(), createdAt: Date(), type: cardType, number: cardNumber)
+        print(cardType)
+        let cardColor = makeCardColor(cardType: cardType)
+        print(cardColor)
+        return Card(id: UUID(), createdAt: Date(), type: cardType, number: cardNumber, color: cardColor)
     }
 
     private func generateRandomCardNumber() -> String {
@@ -59,5 +62,14 @@ final class HomeTableViewModel: HomeTableViewModelProtocol {
             result.append(String(Int.random(in: 0..<10)))
         }
         return result
+    }
+    
+    private func makeCardColor(cardType: CardType) -> String {
+        switch cardType {
+        case .visa:
+            return CardColor.visaColor.name
+        case .mastercard:
+            return CardColor.mastercardColor.name
+        }
     }
 }

@@ -36,6 +36,7 @@ final class CoreDataService: CardsService {
         newCard.number = card.number
         newCard.created_at = card.createdAt
         newCard.cardType = Int64(card.type.rawValue)
+        newCard.color = card.color
 
         do {
             try context.save()
@@ -50,13 +51,14 @@ final class CoreDataService: CardsService {
 private extension Card {
     
     init?(fromLocalCard card: LocalCard) {
-        guard let id = card.id, let number = card.number, let type = CardType(rawValue: Int(card.cardType)), let createdAt = card.created_at else {
+        guard let id = card.id, let number = card.number, let type = CardType(rawValue: Int(card.cardType)), let createdAt = card.created_at , let color = card.color else {
             return nil
         }
         self.id = id
         self.number = number
         self.type = type
         self.createdAt = createdAt
+        self.color = color
     }
 }
 

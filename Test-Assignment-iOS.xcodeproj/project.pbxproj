@@ -27,6 +27,8 @@
 		AB696AC72A4621F200EB12C2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB696AC62A4621F200EB12C2 /* Router.swift */; };
 		AB696AC92A46254800EB12C2 /* HomeTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB696AC82A46254800EB12C2 /* HomeTableViewModel.swift */; };
 		AB6996AB2A483F6F00FF961F /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6996AA2A483F6F00FF961F /* CoreDataService.swift */; };
+		AB6996AD2A484B5900FF961F /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6996AC2A484B5900FF961F /* Color+Extension.swift */; };
+		AB6996AF2A484E8000FF961F /* CardColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6996AE2A484E8000FF961F /* CardColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		AB696AC62A4621F200EB12C2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		AB696AC82A46254800EB12C2 /* HomeTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewModel.swift; sourceTree = "<group>"; };
 		AB6996AA2A483F6F00FF961F /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		AB6996AC2A484B5900FF961F /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		AB6996AE2A484E8000FF961F /* CardColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,7 @@
 			children = (
 				AB38A5112A45C08600268426 /* AppDelegate.swift */,
 				AB696AC62A4621F200EB12C2 /* Router.swift */,
+				AB6996AC2A484B5900FF961F /* Color+Extension.swift */,
 				AB54E7B42A47AA850008FF91 /* Services */,
 				AB54E7A32A4729D20008FF91 /* Model */,
 				AB0693AE2A45FB560010ED04 /* Screens */,
@@ -135,6 +140,7 @@
 			children = (
 				AB54E7A12A4729430008FF91 /* Card.swift */,
 				AB54E7A42A4729E40008FF91 /* CardType.swift */,
+				AB6996AE2A484E8000FF961F /* CardColor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -228,11 +234,13 @@
 				AB0693AC2A45EE5F0010ED04 /* HomeTableViewCell.swift in Sources */,
 				AB696AC92A46254800EB12C2 /* HomeTableViewModel.swift in Sources */,
 				AB0693B12A45FB8C0010ED04 /* CardViewController.swift in Sources */,
+				AB6996AD2A484B5900FF961F /* Color+Extension.swift in Sources */,
 				AB54E7AD2A4764830008FF91 /* HomeUIComposer.swift in Sources */,
 				AB38A5162A45C08600268426 /* HomeTableViewController.swift in Sources */,
 				AB54E7A92A4749550008FF91 /* CardViewModel.swift in Sources */,
 				AB54E7B32A47AA6D0008FF91 /* CardsService.swift in Sources */,
 				AB54E7A22A4729430008FF91 /* Card.swift in Sources */,
+				AB6996AF2A484E8000FF961F /* CardColor.swift in Sources */,
 				AB38A5122A45C08600268426 /* AppDelegate.swift in Sources */,
 				AB54E7A52A4729E40008FF91 /* CardType.swift in Sources */,
 				AB6996AB2A483F6F00FF961F /* CoreDataService.swift in Sources */,

@@ -10,19 +10,18 @@ import UIKit
 struct CardViewData {
     let cardNumber: String
     let bankLogo: UIImage?
+    let color: String
 }
 
 class CardView: UIView {
     private let title = UILabel()
     private let numberOfCard = UILabel()
-    private var numberOfCardSize: CGFloat
     private let icon = UIImageView()
+    private let color = String()
 
-    init(frame: CGRect, numberOfCardSize: CGFloat) {
-        self.numberOfCardSize = numberOfCardSize
+    override init(frame: CGRect) {
         super.init(frame: frame)
         layer.cornerRadius = 18
-        backgroundColor = .systemGray
         configureTitle()
         configureNumberOfCard()
         configureIcon()
@@ -35,11 +34,13 @@ class CardView: UIView {
     func setupModel(_ model: CardViewData) {
         numberOfCard.text = model.cardNumber
         icon.image = model.bankLogo
+        backgroundColor = UIColor(hexString: model.color)
     }
     
     private func configureTitle() {
         addSubview(title)
         title.text = "bank"
+        title.textColor = .white
         title.font = UIFont.systemFont(ofSize: 24)
         title.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -51,7 +52,8 @@ class CardView: UIView {
     
     private func configureNumberOfCard() {
         addSubview(numberOfCard)
-        numberOfCard.font = UIFont.systemFont(ofSize: numberOfCardSize)
+        numberOfCard.textColor = .white
+        numberOfCard.font = UIFont.systemFont(ofSize: 36)
         numberOfCard.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             numberOfCard.centerYAnchor.constraint(equalTo: centerYAnchor),
@@ -61,7 +63,6 @@ class CardView: UIView {
     
     private func configureIcon() {
         addSubview(icon)
-        icon.image = UIImage(named: "visaImage")
         icon.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             icon.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12),
