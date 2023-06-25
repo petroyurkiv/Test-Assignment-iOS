@@ -28,11 +28,15 @@ final class HomeTableViewController: UITableViewController {
         view.backgroundColor = .white
         title = "Home"
         configureNavigationBar()
+        
         viewModel.onListUpdate = { [weak self] cards in
             guard let self else { return }
             self.cards = cards
             self.tableView.reloadData()
         }
+        
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 58.0
         tableView.register(HomeTableViewCell.self, forCellReuseIdentifier: HomeTableViewCell.identifier)
     }
     

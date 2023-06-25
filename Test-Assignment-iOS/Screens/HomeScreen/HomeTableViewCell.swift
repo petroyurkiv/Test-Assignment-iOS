@@ -36,7 +36,7 @@ class HomeTableViewCell: UITableViewCell {
             icon.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             icon.widthAnchor.constraint(equalToConstant: 55),
             icon.heightAnchor.constraint(equalToConstant: 34),
-            icon.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -12)
+            icon.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -12.0)
         ])
     }
     
